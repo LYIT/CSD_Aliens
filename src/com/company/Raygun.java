@@ -20,7 +20,8 @@ public class Raygun {
 
     //Class constructors
     public Raygun(int mChrg, int cChrg) {
-        //TODO: Construct the Raygun object and initialise the attributes
+        mChrg = 10;
+        cChrg = 10;
     }
 
     // Methods
