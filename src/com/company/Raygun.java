@@ -20,8 +20,8 @@ public class Raygun {
 
     //Class constructors
     public Raygun(int mChrg, int cChrg) {
-        mChrg = 10;
-        cChrg = 10;
+        this.mChrg = 10;
+        this.cChrg = 10;
     }
 
     // Methods
@@ -42,11 +42,13 @@ public class Raygun {
     public boolean isCharged() {
         //TODO: Implement the method
         /*Returns true if the gun has a charge*/
+        return true;
 
     }
 
     public boolean isFullyCharged() {
         //TODO: Implement the method
         /*Returns true if the gun is fully charged*/
+        return true;
     }
 }

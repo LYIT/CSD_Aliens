@@ -22,27 +22,69 @@ public class Alien {
 
     //Class constructors
     public Alien(boolean dodging, int alienHealth) {
-        //TODO: Construct the Alien object and initialise the data members appropriately.
-
+        this.dodging = dodging;
+        this.alienHealth = alienHealth;
+        if(alienHealth > 0){
+            dead = false;
+        }else{
+            dead = true;
+        }
     }
 
     // Methods
-    //TODO: Implement appropriate getters and setters for the class
+    //check if alien is dead
+    public boolean isDead() {
+        return dead;
+    }
 
+    //if alienHealth reaches, alien is dead
+    public void setDead(boolean dead) {
+        this.dead = dead;
+    }
+
+    //check if alien is dodging
+    public boolean isDodging() {
+        return dodging;
+    }
+
+//    //if alien is not dead, alien is dodging
+//    public void setDodging(boolean dodging) {
+//        this.dodging = dodging;
+//    }
+
+    //check alien health
+    public int getAlienHealth() {
+        return alienHealth;
+    }
+
+    //set alien health
+    public void setAlienHealth(int alienHealth) {
+        this.alienHealth = alienHealth;
+
+        if(alienHealth < 1){
+            this.dead = true;
+        }
+    }
+
+    //if alien is dead, alien is not dodging. otherwise, alien is dodging
     public void dodge() {
-        //TODO: Implement the method
-        /*Set dodging to true if the alien is alive*/
-
+        if(dead){
+            dodging = false;
+        }else{
+            dodging = true;
+        }
     }
 
     public void hit() {
-        //TODO: Implement the method
-        /*Reduces the alien health by 1. Minimum Alien health should 0.*/
+        if(alienHealth > 0){
+            alienHealth--;
+        }else{
+            alienHealth = 0;
+        }
     }
 
     public void miss() {
-        //TODO: Implement the method
-        /*Sets dodging to false*/
+        this.dodging = false;
 
     }
 
