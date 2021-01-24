@@ -45,11 +45,7 @@ public class Raygun {
     /*increase charge by 1
     do not exceed max charge*/
     public void recharge() {
-        if(getcChrg() < getmChrg()){
-            cChrg++;
-        }else{
-            this.cChrg = this.mChrg;
-        }
+        this.cChrg = (getcChrg() < getmChrg()) ? this.cChrg+1 : this.mChrg;
     }
 
     // return true if charge > 0

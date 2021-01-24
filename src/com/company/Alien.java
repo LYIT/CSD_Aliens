@@ -24,11 +24,7 @@ public class Alien {
     public Alien(boolean dodging, int alienHealth) {
         this.dodging = dodging;
         this.alienHealth = alienHealth;
-        if(alienHealth > 0){
-            dead = false;
-        }else{
-            dead = true;
-        }
+        dead = (alienHealth > 0) ? false:true;
     }
 
     // Methods
@@ -68,24 +64,19 @@ public class Alien {
 
     //if alien is dead, alien is not dodging. otherwise, alien is dodging
     public void dodge() {
-        if(dead){
-            dodging = false;
-        }else{
-            dodging = true;
-        }
+        dodging = (dead) ? false:true;
     }
 
     public void hit() {
-        if(alienHealth > 0){
-            alienHealth--;
-        }else{
-            alienHealth = 0;
+        alienHealth = (alienHealth > 0) ? alienHealth-1 : 0;
+
+        if(alienHealth == 0){
+            setDead(true);
         }
     }
 
     public void miss() {
         this.dodging = false;
-
     }
 
 }
