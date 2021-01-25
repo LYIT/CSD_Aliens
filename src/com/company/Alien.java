@@ -45,11 +45,6 @@ public class Alien {
         return dodging;
     }
 
-//    //if alien is not dead, alien is dodging
-//    public void setDodging(boolean dodging) {
-//        this.dodging = dodging;
-//    }
-
     //check alien health
     public int getAlienHealth() {
         return alienHealth;
