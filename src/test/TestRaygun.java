@@ -4,6 +4,8 @@ import com.company.Alien;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+//Making a change here so I can commit this file
+
 /**
  * testFireAtHit() The gun should only fire if it is charged.
  * Firing the gun will reduce the charge by 1.
